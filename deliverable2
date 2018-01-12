@@ -13,7 +13,7 @@ public class Deliverable2 {
         String secondDate;
        
 	// Request and store first date from user.
-	// Convert strings to use with LocalDate from Time import.
+	// Establish a LocalDate from the string inputted by the user.
         System.out.print("Enter the first date (YYYY-MM-DD): ");
 
         firstDate = scanner.nextLine();
@@ -29,7 +29,7 @@ public class Deliverable2 {
         
         System.out.println("Date #2 is: " + secondDateLD + ".");
 
-        // Establish Period from Time import.
+        // Establish Period from import.
         Period difference = firstDateLD.until(secondDateLD);
 
         // Find differences in years, months, and days.
