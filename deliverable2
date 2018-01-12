@@ -12,8 +12,8 @@ public class Deliverable2 {
         String firstDate;
         String secondDate;
        
-		    // Request and store first date from user.
-		    // Convert strings to use with LocalDate from Time import.
+	// Request and store first date from user.
+	// Convert strings to use with LocalDate from Time import.
         System.out.print("Enter the first date (YYYY-MM-DD): ");
 
         firstDate = scanner.nextLine();
