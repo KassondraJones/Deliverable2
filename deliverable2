@@ -1,0 +1,49 @@
+import java.time.LocalDate;
+import java.time.Period;
+import java.util.Scanner;
+
+public class Deliverable2 {
+
+	public static void main(String[] args) {
+        // Create a scanner object to accept user input.
+        Scanner scanner = new Scanner(System.in);
+        
+        //  Initialize both string variables for user input.
+        String firstDate;
+        String secondDate;
+       
+		    // Request and store first date from user.
+		    // Convert strings to use with LocalDate from Time import.
+        System.out.print("Enter the first date (YYYY-MM-DD): ");
+
+        firstDate = scanner.nextLine();
+        LocalDate firstDateLD = LocalDate.parse(firstDate);
+        
+        System.out.println("Date #1 is: " + firstDateLD + ".");
+        
+        //  Repeat for second date from user.
+        System.out.print("Enter the second date (YYYY-MM-DD): ");
+
+        secondDate = scanner.nextLine();
+        LocalDate secondDateLD = LocalDate.parse(secondDate);
+        
+        System.out.println("Date #2 is: " + secondDateLD + ".");
+
+        // Establish Period from Time import.
+        Period difference = firstDateLD.until(secondDateLD);
+
+        // Find differences in years, months, and days.
+        int years = difference.getYears();
+        int months = difference.getMonths();
+        int days = difference.getDays();
+        
+        //  Use math.abs for absolute value on differences as +/- isn't necessary when speaking of quantity.
+        int differenceYears = Math.abs(years);
+        int differenceMonths = Math.abs(months);
+        int differenceDays = Math.abs(days);
+
+        System.out.println("The time difference between dates is: " + differenceYears + " year(s), " + differenceMonths + " month(s), and " + differenceDays + " day(s).");
+    }
+      
+
+}
